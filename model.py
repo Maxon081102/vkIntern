@@ -50,7 +50,7 @@ class userEncoder(nn.Module):
         
     def forward(self, x):
         batch_size = x.shape[0]
-        x = self.embed(x).float()
+        x = self.embed(x.long()).float()
         output = torch.zeros((batch_size, self.movie_count, self.output_embedding_size))
         for i in range(batch_size):
             output[i] = self.movie_encoder(x[i])
