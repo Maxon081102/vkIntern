@@ -10,4 +10,8 @@
 
 d - евклидово расстояние
 
-Интуиция такая: сделать так, чтобы $$d(userEmb, movieEmb) = 5 - movieRating$$
+Интуиция такая: сделать так, чтобы $$d(userEmb, movieEmb) = const + 5 - movieRating$$
+
+Метрика у меня такая $$5 - d(userEmb, movieEmb) - movieRating$$
+
+
